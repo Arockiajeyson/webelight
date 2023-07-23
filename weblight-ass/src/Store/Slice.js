@@ -2,6 +2,7 @@ import {createSlice,configureStore,combineReducers,createAsyncThunk} from '@redu
 import {persistReducer} from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import axios from 'axios'
+import reducers2 from './Slice2'
 const configu={
     key:'myredux',
     storage
@@ -30,7 +31,7 @@ const slice =createSlice({
             state.value=null
         },
         [fulfilled] :(state,action)=>{
-            // console.log(action)
+            console.log(action.payload.items)
             state.value=action.payload.items
         },
         [rejected]:(state)=>{
@@ -39,8 +40,11 @@ const slice =createSlice({
     }
 })
 
+
+
 const combine =combineReducers({
-    counter:slice.reducer
+    counter:slice.reducer,
+    reposDe:reducers2.reducer
 })
 
 const pReducer =persistReducer(configu,combine)

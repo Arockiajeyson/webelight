@@ -1,9 +1,9 @@
-
-body{
+body {
   background-color: rgb(109, 48, 171);
   color: whitesmoke;
 }
-.flex-div{
+
+.flex-div {
   display: flex;
   margin-top: 5%;
   width: 85%;
@@ -13,32 +13,38 @@ body{
   margin-left: 15%;
   overflow: hidden;
 }
-.img-avatr{
+
+.img-avatr {
   width: 25%;
   padding: 1%;
   /* border-radius: .5em; */
   overflow: hidden;
 }
-.heading{
+
+.heading {
   text-align: center;
   color: whitesmoke;
   margin-top: 1%;
 }
-.content-repos{
+
+.content-repos {
   margin-left: 5%;
   margin-top: 2%;
 }
-.star-img{
+
+.star-img {
   width: 3%;
 }
-.star-cont{
+
+.star-cont {
   padding: 1%;
   padding-right: 8%;
   padding-left: 5%;
   border: 2px solid white;
   width: 20px;
 }
-.issue-con{
+
+.issue-con {
   margin-left: 5%;
   padding: 1%;
   padding-right: 10%;
@@ -46,63 +52,86 @@ body{
   border: 2px solid white;
   width: 20px;
 }
-.star-issue{
+
+.star-issue {
   margin-top: 4%;
   /* display: flex; */
   width: 100%;
+  position: relative;
 }
-.pagination-con{
+
+.com-del {
+  margin-left: 80%;
+  color: black;
+  background-color: white;
+  border-radius: .3em;
+  width: 8%;
+  padding: 10px;
+  margin-top: 1%
+}
+
+.pagination-con {
   margin-top: 5%;
   margin-bottom: 5%;
   display: flex;
   place-content: center;
-  
+
 }
-.progess-cont{
+
+.progess-cont {
   display: flex;
   place-content: center;
   margin-top: 20%;
   margin-bottom: 20%;
 }
-.updated-by{
+
+.updated-by {
   margin-left: 1%;
   font-size: smaller;
 }
+
 @media only screen and (max-width: 900px) {
-  .flex-div{
+  .flex-div {
     display: flex;
     width: 90%;
     height: 250px;
     margin-left: 5%;
   }
-  .img-avatr{
+
+  .img-avatr {
     /* background-color: whitesmoke; */
     width: 60%;
     padding: 1%;
   }
-  .pagination-con{
+
+  .pagination-con {
     margin-top: 5%;
     margin-bottom: 10%;
     display: flex;
     place-content: center;
-    
+
   }
-  .star-issue{
+
+  .star-issue {
     margin-top: 4%;
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
   }
-  .star-img{
+
+  .star-img {
     width: 25%;
   }
-  .star-cont{
+
+  .star-cont {
     padding: 1%;
     padding-left: 5%;
     border: 2px solid white;
     width: 100px;
   }
-  .issue-con{
+
+  .issue-con {
     margin-top: 1%;
     margin-left: -.1%;
     padding: 1%;
@@ -111,19 +140,27 @@ body{
     border: 2px solid white;
     width: 100px;
   }
+  .com-del{
+    margin-left: 70%;
+    width: 20%;
+  }
 }
+
+.imgs {
+  position: absolute;
+  bottom: -1.6em;
+  right: -55%;
+}
+
 .box {
   --border-size: 3px;
   --border-angle: 0turn;
-  background-image: conic-gradient(
-      from var(--border-angle),
+  background-image: conic-gradient(from var(--border-angle),
       rgb(109, 48, 171),
       rgb(109, 48, 171) 50%,
-      rgb(109, 48, 171)
-    ),
+      rgb(109, 48, 171)),
     conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
-  background-size: calc(100% - (var(--border-size) * 2))
-      calc(100% - (var(--border-size) * 2)),
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
     cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -134,11 +171,13 @@ body{
     animation-play-state: paused;
   }
 }
+
 @keyframes bg-spin {
   to {
     --border-angle: 1turn;
   }
 }
+
 @property --border-angle {
   syntax: "<angle>";
   inherits: true;
